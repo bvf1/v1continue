@@ -32,6 +32,8 @@
     "@jest/globals": "^27.4.6",
     "browser-sync": "^2.27.7",
     "cpy-cli": "^3.1.1",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.2",
     "simple-statistics": "^7.7.3"
   }
 }
