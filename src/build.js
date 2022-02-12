@@ -4,12 +4,18 @@ import { readFile, readdir, writeFile } from 'fs/promises';
 
 import { parse } from './parser.js';
 import { skraTemplate, makeHTML, makeIndex } from './make-html.js';
+import { mkdir } from 'fs';
+import { direxists } from './lib/file.js';
 
 const DATA_DIR = './data';
 const OUTPUT_DIR = './dist';
 
 async function main() {
   const files = await readdir(DATA_DIR);
+
+  if (!(await direxists (OUTPUT_DIR))) {
+    await mkdir(OUTPUT_DIR);
+  }
 
   const skrar = [];
 

@@ -2,7 +2,7 @@ import dotenv from 'dotenv';
 
 import express from 'express';
 import { readdir } from 'fs/promises';
-dotenv.config();g
+dotenv.config();
 const app = express();
 
 const { HOST: hostname = '127.0.0.1', PORT: port = 8080 } = process.env;
